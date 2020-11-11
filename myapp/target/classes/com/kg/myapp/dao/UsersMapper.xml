@@ -13,20 +13,20 @@
 	</resultMap>
 
 	<insert id="insertUsers" parameterType="com.kg.myapp.vo.UsersVO">
-	insert into emp_users values ( #{userid}, #{password}, #{name}, #{tel}, #{picture}, #{pictureSize})
+		insert into emp_users values ( #{userid}, #{password}, #{name}, #{tel}, #{picture}, #{pictureSize})
 	</insert>
 	
 	<select id="getPassword" parameterType="string" resultType="string">
-	select password from emp_users where userid=#{user}
+		select password from emp_users where userid=#{user}
 	</select>
 	
 	<select id="getUsers" parameterType="string" resultMap="usersMap">
-	select userid, password, name, tel, picture, picture_size as pictureSize 
-	from emp_users where userid=#{user}
+		select userid, password, name, tel, picture, picture_size as pictureSize 
+		from emp_users where userid=#{user}
 	</select>
 	
 	<select id="idCheck" parameterType="string" resultType="int">
-	select count(userid) from emp_users where userid=${userid}
+		select count(*) from emp_users where userid=#{userid}
 	</select>
 	
 	<!-- compile error는 오류 상태에서 서버를 실행시킨 것 -> 서버 오른클릭해서 클린 한 뒤에 다시 실행하면 된다. -->

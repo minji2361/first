@@ -35,7 +35,7 @@ public class UsersService implements IUsersService {
 	}
 
 	@Override
-	public String idCheck(String userid) {
+	public int idCheck(String userid) {
 		return usersRepository.idCheck(userid);
 	}
 

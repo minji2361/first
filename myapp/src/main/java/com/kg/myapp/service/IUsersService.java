@@ -7,6 +7,6 @@ public interface IUsersService {
 	public void insertUsers(UsersVO users);
 	String getPassword(String userid);
 	UsersVO getUsers(String userid);
-	String idCheck(String userid);
+	int idCheck(String userid);
 
 }
