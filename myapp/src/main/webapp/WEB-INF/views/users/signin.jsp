@@ -28,7 +28,7 @@ background : #ffffff;
 			<th>아이디</th>
 			<td>
 				<input type=text name="userid" id="userid"/>
-				<button id="check">중복검사</button>
+				<button id="check" type="button">중복검사</button>
 			</td>
 		</tr>
 		<tr>
