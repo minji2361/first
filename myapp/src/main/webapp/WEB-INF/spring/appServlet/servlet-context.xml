@@ -39,11 +39,35 @@
 			<beans:value>50000000</beans:value>
 		</beans:property>
 	</beans:bean>
+	
 	<view-controller path="/login" view-name="login"/>
+	<view-controller path="/mock" view-name="mockjson"/>
 	<!-- 컨트롤러를 거치지 않고 바로 홈페이지를 띄우게 할 수 있다 -->
 	<context:component-scan base-package="com.kg.myapp.*" />
 	
 	<beans:bean id="jacksonMessageConverter"
 	class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
 	
+	<beans:bean id="interceptorExample" class="com.kg.myapp.interceptor.InterceptorExample" />
+	
+	<interceptors>
+		<interceptor>
+			<mapping path="/emp/*" />
+			<beans:ref bean="interceptorExample" />
+		</interceptor>
+	</interceptors>
+	
 </beans:beans>
+
+
+
+
+
+
+
+
+
+
+
+
+

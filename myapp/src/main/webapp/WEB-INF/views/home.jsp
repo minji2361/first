@@ -29,7 +29,10 @@
 <input type="submit" value="검색" />
 </form>
 <br>
-<a href="emp/list"><button>3. 사원 목록</button></a><br>
+<a href="emp/list"><button>3. 사원 목록</button></a><br><br>
+<form action="logout.do" method="post">
+<input type=submit value="4.로그아웃" />
+</form><br>
 </body>
 </html>
 
